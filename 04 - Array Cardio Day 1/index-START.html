@@ -47,13 +47,20 @@
     }
 
     let inventorsFrom1500 = filterBday(inventors, 1500);
-    console.log(inventorsFrom1500);
+    // console.log(inventorsFrom1500);
 
     let inventorsFrom1800 = filterBday(inventors, 1800);
-    console.log(inventorsFrom1800);
+    // console.log(inventorsFrom1800);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+
+    function firstLast (array) {
+      return array.map(inventor => `${inventor.first} ${inventor.last}`);
+    }
+
+    let inventorsNames = firstLast(inventors);
+    console.log(inventorsNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
